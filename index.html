@@ -36,7 +36,7 @@
 
     <!-- 1. INICIO & SECCIÓN TIPO BEACONS -->
     <section id="inicio">
-        <img src="LOGO.jpg" alt="Alexa Villalvazo Logo" class="profile-img">
+        <img src="asssets/LOGO.jpg" alt="Alexa Villalvazo Logo" class="profile-img">
         <h1 class="brand-name">ALEXA VILLALVAZO</h1>
         <p class="brand-title">Cosmetóloga</p>
 
@@ -44,20 +44,21 @@
         <div class="beacons-box">
             <p class="beacons-title">Acceso Rápido</p>
 
-            <a href="https://wa.me/TUNUMERODEWHATSAPP" target="_blank" class="beacon-link">
-                💬 Contactar por WhatsApp
+            <a href="https://wa.me/+523411581041" target="_blank" class="beacon-link">
+                💬 Contactame por WhatsApp ¡Da click!
             </a>
 
             <a href="#servicios" class="beacon-link">
                 ✨ Ver Menú de Tratamientos
             </a>
 
-            <a href="https://instagram.com/cosmeale" target="_blank" class="beacon-link">
-                📸 Instagram (@cosmeale)
+            <a href="https://instagram.com/cosm.eale" target="_blank" class="beacon-link">
+                📸 Da click aquí para ir a Instagram
             </a>
 
-            <a href="https://maps.google.com" target="_blank" class="beacon-link">
-                📍 Ubicación del Studio
+            <a href="https://www.google.com/maps/search/?api=1&query=Rosendo+G+Castro,+No.11B,+Col.Infonavit"
+                target="_blank" class="beacon-link">
+                📍 Ubicación: Rosendo G Castro #11B
             </a>
         </div>
     </section>
@@ -71,6 +72,8 @@
                 ayudarte a lograr una piel sana, luminosa y equilibrada mediante tratamientos de alta calidad como
                 microneedling, cócteles de activos y protocolos específicos para control de acné e hiperpigmentación.
             </p>
+            <!-- Imagen del diploma agregada aquí -->
+            <img src="asssets/diploma.png" alt="Diploma en Esteto-Cosmetología" class="about-img">
         </div>
     </section>
 
@@ -84,6 +87,8 @@
             <button class="filter-btn" data-filter="acne">Control Acné</button>
             <button class="filter-btn" data-filter="renovacion">Renovación</button>
             <button class="filter-btn" data-filter="manchas">Manchas</button>
+            <!-- Nuevo botón de filtro -->
+            <button class="filter-btn" data-filter="otros">Otros</button>
         </div>
 
         <div class="services-grid">
@@ -107,17 +112,43 @@
                 <h3>Coctel Glow</h3>
                 <p>Efecto iluminador y calmante inmediato para pieles opacas o deshidratadas.</p>
             </div>
+
+            <!-- Novedad: Dim brasileño -->
+            <div class="service-card" data-category="otros">
+                <h3>Drenaje linfático brasileño</h3>
+                <p>El drenaje linfático brasileño puede convertirse en tu mejor aliado para sentirte más ligera y verte
+                    más definida.</p>
+            </div>
         </div>
     </section>
 
     <!-- 4. GALERÍA -->
-    <section id="galeria">
+    <section id="galeria" style="clear: both; padding-top: 60px;">
         <h2 class="section-title">Galería</h2>
-        <p class="section-subtitle">Resultados y experiencia en cabina</p>
+        <!-- Si este era el texto que no se veía, ahora forzamos su visibilidad -->
+        <p class="section-subtitle" style="display: block; margin-bottom: 40px; text-align: center;">Resultados y
+            experiencia en cabina</p>
+
         <div class="gallery-grid">
-            <!-- Asegúrate de tener estas imágenes en tu carpeta o cambiar el nombre -->
-            <img src="Captura de pantalla 2026-09-27 180148.jpg" alt="Tratamiento en cabina" class="gallery-item">
-            <img src="Captura de pantalla 2026-09-27 180158.jpg" alt="Productos y sueros" class="gallery-item">
+            <div class="gallery-img-container">
+                <img src="asssets/tratamiento-cabina.png" alt="Tratamiento en cabina" class="gallery-item">
+                <div class="gallery-caption">Tratamiento en cabina</div>
+            </div>
+
+            <div class="gallery-img-container">
+                <img src="asssets/mama-de-ale.png" alt="Tratamiento de la mamá de Ale" class="gallery-item">
+                <div class="gallery-caption">Paciente: Renovación facial</div>
+            </div>
+
+            <div class="gallery-img-container">
+                <img src="asssets/sueros.png" alt="Productos y sueros" class="gallery-item">
+                <div class="gallery-caption">Nuestra mixología de activos</div>
+            </div>
+
+            <div class="gallery-img-container">
+                <img src="asssets/microagujas.png" alt="Microneedling" class="gallery-item">
+                <div class="gallery-caption">Sesión de Microneedling</div>
+            </div>
         </div>
     </section>
 
@@ -131,6 +162,23 @@
             <div class="faq-answer">
                 En tu primera sesión realizamos un diagnóstico facial completo para evaluar tu tipo de piel y
                 seleccionar el protocolo o cóctel de activos adecuado.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">¿Cada cuanto debo hacerme un facial? <span>+</span></button>
+            <div class="faq-answer">
+                La frecuencia depende del objetivo... Tu plan evoluciona tu piel, si quieres dejar de improvisar, estoy
+                para acompañarte.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">¿Qué beneficios tiene el Drenaje Linfático Brasileño? <span>+</span></button>
+            <div class="faq-answer">
+                Es una técnica manual que combina firmeza y ritmo para estimular el sistema linfático. Ayuda a eliminar
+                toxinas, reduce drásticamente la retención de líquidos, desinflama el cuerpo y moldea la figura desde la
+                primera sesión, dejándote una sensación de ligereza.
             </div>
         </div>
 
@@ -149,7 +197,7 @@
         <p class="section-subtitle">¿Tienes alguna duda o deseas agendar?</p>
         <div class="contact-box">
             <p>Haz clic abajo para chatear directamente por WhatsApp y consultar disponibilidad.</p>
-            <a href="https://wa.me/TUNUMERODEWHATSAPP" target="_blank" class="whatsapp-btn">Enviar Mensaje por
+            <a href="https://wa.me/+523411581041" target="_blank" class="whatsapp-btn">Enviar Mensaje por
                 WhatsApp</a>
         </div>
     </section>

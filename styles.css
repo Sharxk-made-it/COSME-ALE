@@ -173,6 +173,23 @@ section {
     text-align: center;
 }
 
+.about-img {
+    width: 100%;
+    max-width: 350px;
+    /* Evita que la foto se haga gigante en pantallas grandes */
+    height: auto;
+    border-radius: 12px;
+    margin-top: 25px;
+    /* Separa la imagen del texto */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    /* Le da un ligero sombreado 3D */
+    display: block;
+    margin-left: auto;
+    /* Estos dos margin centran la foto */
+    margin-right: auto;
+}
+
 /* --- SERVICIOS Y FILTROS --- */
 .filter-container {
     display: flex;
@@ -226,17 +243,62 @@ section {
 /* --- GALERÍA --- */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    /* Crea 2 columnas perfectas en escritorio y 1 en celular */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.gallery-img-container {
+    overflow: hidden;
+    /* Esto mantiene el diseño limpio sin desbordarse */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .gallery-item {
     width: 100%;
-    height: 200px;
+    height: 350px;
+    /* Altura ideal para que quepan las 4 sin hacer la página kilométrica */
     object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid var(--border-color);
+    display: block;
+    transition: transform 0.5s ease;
+    /* Prepara el movimiento suave */
 }
+
+/* Animación: Movimiento (Zoom y giro ligero) al pasar el cursor */
+.gallery-img-container:hover .gallery-item {
+    transform: scale(1.08) rotate(1deg);
+}
+
+/* Sombreado dinámico en el contenedor */
+.gallery-img-container:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Estilo para el texto debajo de cada imagen */
+.gallery-caption {
+    background-color: #ffffff;
+    padding: 12px 10px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Ajustamos la imagen para que haga espacio al texto */
+.gallery-item {
+    width: 100%;
+    height: 300px;
+    /* Reducimos un poco la altura para que quepa el texto */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
 
 /* --- PREGUNTAS FRECUENTES (ACCORDEON) --- */
 .faq-item {
