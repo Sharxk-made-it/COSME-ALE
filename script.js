@@ -1,71 +1,50 @@
-document.addEventListener('DOMContentLoaded', () => {
-// 1. NAVEGACIÓN MÓVIL
-const navToggle = document.getElementById('navToggle');
-const navMenu = document.getElementById('navMenu');
-const navLinks = document.querySelectorAll('.nav-link');
+// Esperar a que el DOM cargue completamente
+document.addEventListener("DOMContentLoaded", () => {
 
-if (navToggle && navMenu) {
-navToggle.addEventListener('click', () => {
-navMenu.classList.toggle('is-active');
-});
+    // --- 1. LÓGICA DE FILTROS PARA SERVICIOS ---
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const serviceCards = document.querySelectorAll(".service-card");
 
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    navMenu.classList.remove('is-active');
-  });
-});
+    filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Remover clase active de todos los botones
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            // Agregar clase active al botón clickeado
+            button.classList.add("active");
 
+            // Obtener la categoría seleccionada
+            const filterValue = button.getAttribute("data-filter");
 
-}
+            // Mostrar/Ocultar tarjetas según la categoría
+            serviceCards.forEach(card => {
+                if (filterValue === "todos" || card.getAttribute("data-category") === filterValue) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
 
-// 2. FILTRADO DINÁMICO DE SERVICIOS
-const filterBtns = document.querySelectorAll('.filter-btn');
-const serviceCards = document.querySelectorAll('.service-card');
+    // --- 2. LÓGICA DE ACORDEÓN PARA PREGUNTAS FRECUENTES (FAQ) ---
+    const faqQuestions = document.querySelectorAll(".faq-question");
 
-filterBtns.forEach(btn => {
-btn.addEventListener('click', () => {
-const filter = btn.getAttribute('data-filter');
+    faqQuestions.forEach(question => {
+        question.addEventListener("click", () => {
+            // Obtener el contenedor padre (.faq-item)
+            const faqItem = question.parentElement;
 
-  // Cambiar estado activo en botones
-  filterBtns.forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
+            // Alternar la clase 'active' para abrir o cerrar
+            faqItem.classList.toggle("active");
 
-  // Filtrar servicios
-  serviceCards.forEach(card => {
-    const category = card.getAttribute('data-category');
-    if (filter === 'all' || category === filter) {
-      card.classList.remove('hidden');
-    } else {
-      card.classList.add('hidden');
-    }
-  });
-});
+            // Cambiar el signo + a - visualmente
+            const span = question.querySelector("span");
+            if (faqItem.classList.contains("active")) {
+                span.textContent = "−";
+            } else {
+                span.textContent = "+";
+            }
+        });
+    });
 
-
-});
-
-// 3. ACCORDEÓN (FAQ)
-const accordionHeaders = document.querySelectorAll('.accordion-header');
-
-accordionHeaders.forEach(header => {
-header.addEventListener('click', () => {
-const accordionItem = header.parentElement;
-const isExpanded = header.getAttribute('aria-expanded') === 'true';
-
-  // Cerrar otros acordeones abiertos
-  document.querySelectorAll('.accordion-item').forEach(item => {
-    item.classList.remove('active');
-    const btn = item.querySelector('.accordion-header');
-    if (btn) btn.setAttribute('aria-expanded', 'false');
-  });
-
-  // Alternar el acordeón seleccionado
-  if (!isExpanded) {
-    accordionItem.classList.add('active');
-    header.setAttribute('aria-expanded', 'true');
-  }
-});
-
-
-});
 });

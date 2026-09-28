@@ -1,191 +1,161 @@
-<button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación">
-    <span class="hamburger"></span>
-</button>
+<!DOCTYPE html>
+<html lang="es">
 
-<ul class="nav-menu" id="navMenu">
-    <li><a href="#inicio" class="nav-link">Inicio</a></li>
-    <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-    <li><a href="#servicios" class="nav-link">Servicios</a></li>
-    <li><a href="#galeria" class="nav-link">Galería</a></li>
-    <li><a href="#faq" class="nav-link">FAQ</a></li>
-    <li><a href="#contacto" class="nav-link">Contacto</a></li>
-</ul>
-</nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosme Ale | Alexa Villalvazo - Cosmetóloga</title>
 
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
 
-<!-- BLOQUE BEACONS / LINKTREE -->
-<div class="beacons-container" aria-label="Enlaces rápidos">
-    <h2 class="beacons-header">Acceso Rápido</h2>
+    <!-- Enlace a tu archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    <a href="https://wa.me/5210000000000" target="_blank" rel="noopener noreferrer" class="beacon-card beacon-primary">
-        <span class="beacon-icon">💬</span>
-        <span class="beacon-label">Agendar Cita vía WhatsApp</span>
-    </a>
+<body>
 
-    <a href="#servicios" class="beacon-card">
-        <span class="beacon-icon">✨</span>
-        <span class="beacon-label">Explorar Tratamientos</span>
-    </a>
+    <!-- NAVEGACIÓN -->
+    <nav>
+        <div class="nav-container">
+            <a href="#inicio" class="nav-logo">AV</a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#servicios">Tratamientos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <a href="https://instagram.com/cosmeale" target="_blank" rel="noopener noreferrer" class="beacon-card">
-        <span class="beacon-icon">📸</span>
-        <span class="beacon-label">Síguenos en Instagram</span>
-    </a>
+    <!-- 1. INICIO & SECCIÓN TIPO BEACONS -->
+    <section id="inicio">
+        <img src="LOGO.jpg" alt="Alexa Villalvazo Logo" class="profile-img">
+        <h1 class="brand-name">ALEXA VILLALVAZO</h1>
+        <p class="brand-title">Cosmetóloga</p>
 
-    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="beacon-card">
-        <span class="beacon-icon">📍</span>
-        <span class="beacon-label">Ubicación del Studio</span>
-    </a>
-</div>
-</section>
+        <!-- BLOQUE BEACONS / LINKTREE -->
+        <div class="beacons-box">
+            <p class="beacons-title">Acceso Rápido</p>
 
-<!-- SOBRE MÍ -->
-<section id="sobre-mi" class="section">
-    <div class="container">
-        <h2 class="section-title">Sobre Mí</h2>
-        <p class="section-subtitle">Ciencia y cuidado personalizado para la salud de tu piel</p>
+            <a href="https://wa.me/TUNUMERODEWHATSAPP" target="_blank" class="beacon-link">
+                💬 Contactar por WhatsApp
+            </a>
 
-        <div class="card about-card">
-            <p class="about-text">
-                Hola, soy <strong>Alexa Villalvazo</strong>, cosmetóloga enfocada en transformar la salud de tu rostro
-                mediante tratamientos clínicos y estéticos de alta precisión. Me especializo en la aplicación de
-                <em>microneedling</em>, mezcla personalizada de activos y protocolos específicos para controlar el acné,
-                disminuir poros y reducir la hiperpigmentación.
+            <a href="#servicios" class="beacon-link">
+                ✨ Ver Menú de Tratamientos
+            </a>
+
+            <a href="https://instagram.com/cosmeale" target="_blank" class="beacon-link">
+                📸 Instagram (@cosmeale)
+            </a>
+
+            <a href="https://maps.google.com" target="_blank" class="beacon-link">
+                📍 Ubicación del Studio
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. SOBRE MÍ -->
+    <section id="sobre-mi">
+        <h2 class="section-title">Sobre mí</h2>
+        <p class="section-subtitle">Salud y renovación para tu piel</p>
+        <div class="about-card">
+            <p>Hola, soy Alexa Villalvazo, cosmetóloga enfocada en el cuidado facial personalizado. Mi objetivo es
+                ayudarte a lograr una piel sana, luminosa y equilibrada mediante tratamientos de alta calidad como
+                microneedling, cócteles de activos y protocolos específicos para control de acné e hiperpigmentación.
             </p>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- SERVICIOS CON FILTROS -->
-<section id="servicios" class="section">
-    <div class="container">
-        <h2 class="section-title">Servicios & Tratamientos</h2>
-        <p class="section-subtitle">Filtra nuestro catálogo según las necesidades de tu piel</p>
+    <!-- 3. SERVICIOS / TRATAMIENTOS -->
+    <section id="servicios">
+        <h2 class="section-title">Tratamientos</h2>
+        <p class="section-subtitle">Selecciona una categoría para filtrar</p>
 
-        <div class="filters-wrapper" id="filtersWrapper">
-            <button class="filter-btn active" data-filter="all">Todos</button>
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="todos">Todos</button>
             <button class="filter-btn" data-filter="acne">Control Acné</button>
             <button class="filter-btn" data-filter="renovacion">Renovación</button>
             <button class="filter-btn" data-filter="manchas">Manchas</button>
         </div>
 
-        <div class="services-grid" id="servicesGrid">
-            <article class="card service-card" data-category="renovacion">
-                <span class="badge">Avanzado</span>
-                <h3 class="service-title">Microneedling</h3>
-                <p class="service-desc">Estimula la renovación celular profunda y producción de colágeno mediante
-                    micropunciones asistidas.</p>
-            </article>
+        <div class="services-grid">
+            <div class="service-card" data-category="renovacion">
+                <h3>Microneedling</h3>
+                <p>Estimula la renovación celular profunda, producción de colágeno y suaviza líneas de expresión o
+                    cicatrices.</p>
+            </div>
 
-            <article class="card service-card" data-category="acne">
-                <span class="badge badge-pink">Control</span>
-                <h3 class="service-title">Coctel Control Acné</h3>
-                <p class="service-desc">Fórmula antibacteriana y desinflamatoria que regula el exceso de sebo y calma
-                    brotes activos.</p>
-            </article>
+            <div class="service-card" data-category="acne">
+                <h3>Coctel Control Acné</h3>
+                <p>Acción antibacteriana, desinflama el brote y ayuda a regular la producción de grasa.</p>
+            </div>
 
-            <article class="card service-card" data-category="manchas">
-                <span class="badge badge-blue">Aclarante</span>
-                <h3 class="service-title">Coctel Whitening</h3>
-                <p class="service-desc">Disminuye la apariencia de los poros y reduce gradualmente la hiperpigmentación
-                    o manchas solares.</p>
-            </article>
+            <div class="service-card" data-category="manchas">
+                <h3>Coctel Whitening</h3>
+                <p>Disminuye la apariencia de los poros y reduce gradualmente la hiperpigmentación.</p>
+            </div>
 
-            <article class="card service-card" data-category="renovacion">
-                <span class="badge">Luminosidad</span>
-                <h3 class="service-title">Coctel Glow</h3>
-                <p class="service-desc">Efecto iluminador, hidratante y calmante ideal para devolver la vitalidad a la
-                    piel opaca.</p>
-            </article>
+            <div class="service-card" data-category="renovacion">
+                <h3>Coctel Glow</h3>
+                <p>Efecto iluminador y calmante inmediato para pieles opacas o deshidratadas.</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- GALERÍA -->
-<section id="galeria" class="section">
-    <div class="container">
+    <!-- 4. GALERÍA -->
+    <section id="galeria">
         <h2 class="section-title">Galería</h2>
-        <p class="section-subtitle">Experiencia y atención personalizada en cabina</p>
-
+        <p class="section-subtitle">Resultados y experiencia en cabina</p>
         <div class="gallery-grid">
-            <figure class="gallery-item">
-                <img src="Captura de pantalla 2026-09-27 180148.jpg"
-                    onerror="this.src='https://placehold.co/400x300/F9F8F6/1A1A1A?text=Cabina'"
-                    alt="Tratamiento en cabina" loading="lazy">
-            </figure>
-            <figure class="gallery-item">
-                <img src="Captura de pantalla 2026-09-27 180158.jpg"
-                    onerror="this.src='https://placehold.co/400x300/F9F8F6/1A1A1A?text=Sueros'"
-                    alt="Activos cosmetológicos" loading="lazy">
-            </figure>
-            <figure class="gallery-item">
-                <img src="Captura de pantalla 2026-09-27 180120.jpg"
-                    onerror="this.src='https://placehold.co/400x300/F9F8F6/1A1A1A?text=Microneedling'"
-                    alt="Equipo de microneedling" loading="lazy">
-            </figure>
-            <figure class="gallery-item">
-                <img src="Captura de pantalla 2026-09-27 180134.jpg"
-                    onerror="this.src='https://placehold.co/400x300/F9F8F6/1A1A1A?text=Diagnostico'"
-                    alt="Diagnóstico facial" loading="lazy">
-            </figure>
+            <!-- Asegúrate de tener estas imágenes en tu carpeta o cambiar el nombre -->
+            <img src="Captura de pantalla 2026-09-27 180148.jpg" alt="Tratamiento en cabina" class="gallery-item">
+            <img src="Captura de pantalla 2026-09-27 180158.jpg" alt="Productos y sueros" class="gallery-item">
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- FAQ -->
-<section id="faq" class="section">
-    <div class="container">
+    <!-- 5. PREGUNTAS FRECUENTES -->
+    <section id="faq">
         <h2 class="section-title">Preguntas Frecuentes</h2>
-        <p class="section-subtitle">Respuestas rápidas antes de agendar tu valoración</p>
+        <p class="section-subtitle">Resuelve tus dudas antes de tu cita</p>
 
-        <div class="accordion" id="faqAccordion">
-            <div class="accordion-item">
-                <button class="accordion-header" aria-expanded="false">
-                    <span>¿Cómo sé cuál es el tratamiento adecuado para mi piel?</span>
-                    <span class="accordion-icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <p>Realizamos un diagnóstico facial preliminar en tu primera cita para identificar si tu piel
-                        necesita hidratación, control de brotes o aclarado de manchas.</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-header" aria-expanded="false">
-                    <span>¿El tratamiento con Microneedling duele?</span>
-                    <span class="accordion-icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <p>Es un procedimiento mínimamente invasivo y altamente tolerable. Ajustamos la intensidad según la
-                        sensibilidad de tu rostro.</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-header" aria-expanded="false">
-                    <span>¿Cuántas sesiones necesito para ver resultados?</span>
-                    <span class="accordion-icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <p>Desde la primera sesión notarás cambios en la textura y luminosidad. Para condiciones específicas
-                        como acné o manchas se recomiendan de 3 a 6 sesiones.</p>
-                </div>
+        <div class="faq-item">
+            <button class="faq-question">¿Cómo sé qué tratamiento necesita mi piel? <span>+</span></button>
+            <div class="faq-answer">
+                En tu primera sesión realizamos un diagnóstico facial completo para evaluar tu tipo de piel y
+                seleccionar el protocolo o cóctel de activos adecuado.
             </div>
         </div>
-    </div>
-</section>
 
-<!-- CONTACTO -->
-<section id="contacto" class="section">
-    <div class="container">
-        <h2 class="section-title">Contacto Directo</h2>
-        <p class="section-subtitle">¿Tienes alguna duda o quieres agendar tu cita?</p>
-
-        <div class="card contact-card">
-            <p>Escríbenos directamente por WhatsApp para consultar horarios y promociones vigentes.</p>
-            <a href="https://wa.me/5210000000000" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-                Enviar Mensaje por WhatsApp
-            </a>
+        <div class="faq-item">
+            <button class="faq-question">¿El tratamiento con Microneedling es doloroso? <span>+</span></button>
+            <div class="faq-answer">
+                Es un procedimiento muy tolerable y mínimamente invasivo. Adaptamos la profundidad del tratamiento según
+                la sensibilidad de tu piel.
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- 6. CONTACTO -->
+    <section id="contacto">
+        <h2 class="section-title">Contacto</h2>
+        <p class="section-subtitle">¿Tienes alguna duda o deseas agendar?</p>
+        <div class="contact-box">
+            <p>Haz clic abajo para chatear directamente por WhatsApp y consultar disponibilidad.</p>
+            <a href="https://wa.me/TUNUMERODEWHATSAPP" target="_blank" class="whatsapp-btn">Enviar Mensaje por
+                WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Enlace a tu archivo JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
